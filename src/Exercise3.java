@@ -12,13 +12,13 @@ public class Exercise3 {
 
         income = Float.parseFloat(incomeAsString);
 
-        JOptionPane.showMessageDialog(null, taxRate(income));
+        JOptionPane.showMessageDialog(null, "gross income\t"+ income +"\nTax rate\t " + taxRate(income)+ "\nTax due\t " + taxdue(income));
 
     }
 
     private static float taxRate(float i)
     {
-        final float TAX_RATE0 = 0f ,TAX_RATE1 = 20f, TAX_RATE2 = 40f;
+        final float TAX_RATE0 = 0f ,TAX_RATE1 = 20f, TAX_RATE2 = 41f;
         final float INCOME_BREAK1 = 20000f, INCOME_BREAK2 = 36000f;
 
       if(i <= INCOME_BREAK1 )
@@ -35,7 +35,25 @@ public class Exercise3 {
 
     }
 
+    private static float taxdue(float i)
+    {
+        final float TAX_RATE1 = 20f, TAX_RATE2 = 40f;
+        final float INCOME_BREAK1 = 20000f, INCOME_BREAK2 = 36000f;
 
+        if(i <= INCOME_BREAK1 )
+        {
+
+            return  i;
+        }
+        else if (i<= INCOME_BREAK2)
+        {
+            return (i/100) * TAX_RATE1;
+        }
+        else
+            return (i/100) * TAX_RATE2;
+
+
+    }
 
 
 }
