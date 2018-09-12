@@ -15,7 +15,7 @@ public class Exercise1 {
 
         price = snacks*2;
 
-        JOptionPane.showMessageDialog(null,);
+        JOptionPane.showMessageDialog(null,"Your Name is "+ name +"\n your class is" + yourClass + "\nyou have "+snacks + "\n that cost "+ price,"Info",JOptionPane.INFORMATION_MESSAGE);
 
 
 
