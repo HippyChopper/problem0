@@ -10,7 +10,7 @@ public class Exercise2 {
 
         km = Float.parseFloat(kmAsString);
 
-        JOptionPane.showMessageDialog(null, price(km));
+        JOptionPane.showMessageDialog(null, " this is the price " +price(km));
     }
         private static float price ( float km)
         {
